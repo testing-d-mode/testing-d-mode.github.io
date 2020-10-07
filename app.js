@@ -5,7 +5,9 @@ btn.addEventListener('click', evt => {
     const mode = window.matchMedia('(prefers-color-scheme: dark)');
     // console.log(mode);
     dataContainer.innerHTML = `Стиль: ${mode.media}` + ' | ' + `Запрошен: ${mode.matches}`;
-    // if (mode.matches) {
-    //     console.log('matches');
-    // }
+    if (mode.media == 'not all' || mode.matches) {
+        dataContainer.innerHTML = `Стиль: ${mode.media}` + ' | ' + `Запрошен: ${mode.matches}`;
+    } else {
+        dataContainer.innerHTML = `Стиль: ${mode.media}` + ' | ' + `Запрошен: ${mode.matches}`;
+    }
 });
